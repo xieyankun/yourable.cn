@@ -1,0 +1,24 @@
+@import './color';
+
+@import './fonts';
+
+
+.fz-12{
+  font-size: $font-size-12;
+}
+.fz-14{
+  font-size: $font-size-14;
+}
+.fz-16{
+  font-size: $font-size-16;
+}
+.fz-18{
+  font-size: $font-size-18;
+}
+
+.gray-1{
+  color: $fonts-color-gray-1;
+}
+.gray-2{
+  color: $fonts-color-gray-2;
+}
