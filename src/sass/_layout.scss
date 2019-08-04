@@ -11,6 +11,29 @@
   }
 }
 
+.flex{
+  display: flex;
+  align-items: center;
+}
+.flex_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 .icon{
   cursor: pointer;
+}
+.mr-8{
+  margin-right: 8px;
+}
+.pl-24{
+  padding-left: 24px;
+}
+.gray{
+  color: #c1c1c1 !important;
+}
+.able-gengduo{
+  vertical-align: -webkit-baseline-middle;
 }

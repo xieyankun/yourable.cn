@@ -10,9 +10,9 @@ body{
 .icon{
   transition: all 0.3s ease;
 }
-.icon:hover{
-  font-size: 18px;
-}
+// .icon:hover{
+//   font-size: 18px;
+// }
 
 header{
   position: fixed;
@@ -22,7 +22,7 @@ header{
   width: 100%;
   height: 64px;
   background: #FFF;
-  box-shadow: 0 2px 8px #dbdbdb;
+  box-shadow: 0 4px 12px #b9b9b9;;
   line-height: 64px;
 
   nav{
@@ -86,87 +86,17 @@ header{
   padding: 78px 0 24px;
   width: 980px;
   background: #FFF;
-
-}
-
-.panel{
-  position: relative;
-  margin-top: 48px;
-  padding: 0 38px;
-  font-size: 24px;
-  line-height: 32px;
-
-  .able-interaction{
-    margin-right: 8px;
-    color: #3F9EFC;
-    font-size: 24px;
-  }
-
-  .title{
-    span{
-      font-size: 18px;
-    }
-  }
 }
 
 
+.list-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-right: 54px;
 
-.search-wrap{
-  position: absolute;
-  top: 0;
-  right: 38px;
-}
-
-.menu{
-  margin: 36px auto;
-  padding-left: 58px;
-  text-align: center;
-  line-height: 48px;
-
-  .ctrl-wrapper{
-    position: absolute;
-    overflow: hidden;
-    width: 48px;
-    height: 48px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-
-    &:hover{
-      width: 56px;
-      height: 56px;
-    }
-
-    img{
-      width: 100%;
-    }
-  }
-
-  .panel-info{
-    font-size: 18px;
-
-    span{
-      color: #50AFFF;
-      vertical-align: bottom;
-      font-weight: 300;
-      font-size: 48px;
-    }
-  }
-
-  .menu-type{
-    float: right;
-    color: #C1C2D8;
-  }
-}
-
-// 时间课程
-.interact-course{
-  margin-bottom: 96px;
-
-  .ic-title{
-    margin-bottom: 12px;
-    line-height: 34px;
-  }
-  .week-text{
+  .lh-name{
     position: relative;
     width: 132px;
     height: 34px;
@@ -175,7 +105,7 @@ header{
     text-align: center;
     line-height: 34px;
   }
-  .week-text::after{
+  .lh-name::after{
     position: absolute;
     top: -6px;
     right: -24px;
@@ -186,108 +116,174 @@ header{
     content: "";
     transform: rotate(64deg);
   }
-  .title-bar{
-    float: right;
-    width: 160px;
-    color: #C1C2D8;
-  }
 
-  .ic-list{
-    margin: 0 12px;
-    padding: 0 42px 0 128px;
-
-    &:hover{
-      background: #F8F8F8;
-      cursor: pointer;
-    }
-
-    &:hover .ic-item{
-      border: none;
-    }
-  }
-  .ic-item{
-    padding: 42px 0;
-    border-bottom: 1px solid #E5EDF1;
-  }
-  .avatar{
-    float: left;
-    margin-right: 64px;
-  }
-  .ic-name{
-    cursor: pointer;
-
-    h1{
-      float: left;
-      margin-right: 96px;
-    }
-
-    .icon{
+  .lh-title{
+    span {
       display: inline-block;
-      margin-right: 12px;
-      color: #CCCCCC;
-      opacity: 0;
-      transform: translateY(-20px);
+      width: 94px;
+      text-align: center;
+      font-size: 14px;
+      color: #C1C2D8;
     }
-    .love{
-      color: #FE7676;
-    }
-  
-    .able-fav{
-      transition: all 0.2s ease-in-out;
-    }
-    .able-download{
-      transition: all 0.3s ease-in-out;
-    }
-    .able-share{
-      transition: all 0.4s ease-in-out;
-    }
-
-    &:hover h1{
-      color: #909090;
-    }
-
-    &:hover .able-fav{
-      opacity: 1;
-      transform: translateY(0px);
-    }
-
-    &:hover .able-download{
-      opacity: 1;
-      transform: translateY(0px);
-    }
-
-    &:hover .able-share{
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-
-  .ic-other{
-    position: relative;
-    margin-top: 24px;
-    font-size: 12px;
-  }
-  .author{
-    padding-top: 8px;
-  }
-  .ico-score, .ico-time {
-    float: right;
-    color: #C1C2D8;
-    
-  }
-  .ico-score{
-    width: 106px;
-
-    span{
-      font-weight: bold;
-      font-size: 20px;
-    }
-  }
-  .ico-time{
-    margin-top: 8px;
-    width: 160px;
   }
 }
+
+.list-item{
+  margin: 0 54px 0 64px;
+  margin-bottom: 12px;
+
+  .li-title{
+    border-bottom: 1px solid #E5EDF1;
+    cursor: pointer;
+  }
+  .avatar{
+    width: 54px;
+    height: 54px;
+    margin-right: 36px;
+    img{
+      width: 80%;
+    }
+  }
+  .li-content{
+    flex: 1;
+    padding: 32px 0px;
+
+    &__title{
+      font-weight: bold;
+      margin-bottom: 24px;
+
+      .icon{
+        margin-right: 12px;
+        color: #999;
+      }
+
+      h1{
+        cursor: pointer;
+      }
+      .operate{
+        margin-left: 16px;
+
+        .icon{
+          display: inline-block;
+          margin-right: 12px;
+          color: #CCCCCC;
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+      }
+
+      
+      .love{
+        color: #FE7676;
+      }
+    
+      .able-fav{
+        transition: all 0.2s ease-in-out;
+      }
+      .able-download{
+        transition: all 0.3s ease-in-out;
+      }
+      .able-share{
+        transition: all 0.4s ease-in-out;
+      }
+  
+      &:hover h1{
+        color: #909090;
+      }
+  
+      &:hover .able-fav{
+        opacity: 1;
+        transform: translateY(0px);
+      }
+  
+      &:hover .able-download{
+        opacity: 1;
+        transform: translateY(0px);
+      }
+  
+      &:hover .able-share{
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
+    }
+    .left{
+      font-size: 12px;
+      color: #5d5d5d;
+    }
+    .bar{
+      width: 94px;
+      color: #C1C2D8;
+      font-size: 12px;
+      text-align: center;
+
+      span{
+        font-size: 16px;
+      }
+    }
+    .tag {
+      span{
+        color: #75A6C8;
+      }
+    }
+  }
+  .li-list{
+    padding-left: 54px;
+    .li-content {
+      border-bottom: 1px solid #E5EDF1;
+    }
+  }
+  .end-time{
+    background: #E06064;
+    color: #fff;
+    padding: 0 8px;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+}
+
+.result{
+  margin-bottom: 64px;
+
+  .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 42px;
+    margin: 48px 0 54px;
+
+    .left{
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    img{
+      width: 48px;
+      margin-right: 8px;
+    }
+    .right{
+      font-size: 14px;
+      background: #5393F3;
+      color: #FFF;
+      border-radius: 4px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+  }
+  .score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span{
+      font-size: 48px;
+      color: #66ADE8;
+      padding: 0 12px;
+    }
+  }
+}
+
 
 
 
